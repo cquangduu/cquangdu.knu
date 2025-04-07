@@ -1,0 +1,122 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #282C34;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.resume-container {
+    display: flex;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cột bên trái */
+.left-column {
+    width: 35%;
+    background-color: #84A93F ;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    object-fit: cover;
+}
+
+.left-column h3  {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #431808;
+}
+
+.left-column p, li {
+    font-size: 14px;
+    color: #431808 ;
+}
+
+.contact, .skills, .languages {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.contact p, .skills ul, .languages p {
+    margin-top: 5px;
+}
+
+.skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills li::before {
+    content: "• ";
+    color: #333;
+    font-weight: bold;
+}
+.left-column i {
+    color: #431808; 
+}
+
+/* Cột bên phải */
+.right-column {
+    background-color: #431808 ;
+    width: 65%;
+    padding: 30px;
+}
+.right-column p, i, h3, li {
+    color: #84A93F;
+}
+
+h1 {
+    font-size: 24px;
+    color: #84A93F ;
+}
+
+h2 {
+    font-size: 18px;
+    color:  #84A93F;
+    margin-bottom: 20px;
+}
+
+.education, .experience {
+    margin-top: 20px;
+}
+
+.edu-item, .exp-item {
+    margin-top: 15px;
+}
+
+.edu-item p, .exp-item p {
+    margin-bottom: 5px;
+}
+
+.exp-item ul {
+    padding-left: 20px;
+}
+
+.exp-item ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+.right-column i {
+    color: #84A93F;
+}
+/* Biểu tượng */
+i {
+    margin-right: 8px;
+    color: #666;
+}
