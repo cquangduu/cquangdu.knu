@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #282C34;
+    background-color: rgba(255, 255, 255, 0.632);
     display: flex;
     justify-content: center;
     padding: 30px;
@@ -16,36 +16,51 @@ body {
 .resume-container {
     display: flex;
     max-width: 900px;
-    background-color: white;
-    border-radius: 10px;
+    background-color: blue;
+    border-radius: 20px;
+    padding: 10px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    border: 1px solid blue;
+    margin-top: 5px ;
 }
 
 /* Cột bên trái */
 .left-column {
     width: 35%;
-    background-color: #84A93F ;
+    background-color: #E6E0D2;
     padding: 20px;
     text-align: center;
+    border-right: 2px solid blue;
+
 }
 
 .profile-section img {
     width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    height: 120px;
     object-fit: cover;
+    
+    background-color: #fce4ec;
 }
 
 .left-column h3  {
     font-size: 18px;
     margin-top: 15px;
-    color: #431808;
+    color: #1E0EFF;
 }
 
 .left-column p, li {
     font-size: 14px;
-    color: #431808 ;
+    color: #4F4F4F; 
+}
+
+.left-column p {
+    margin-top: 5px;
+    text-align: justify;
+    hyphens: auto;
+    word-wrap: break-word; 
 }
 
 .contact, .skills, .languages {
@@ -62,33 +77,65 @@ body {
     padding-left: 0;
 }
 
+.skills li {
+    margin-bottom: 5px;
+}
+
 .skills li::before {
     content: "• ";
-    color: #333;
+    color: #4F4F4F;
     font-weight: bold;
 }
-.left-column i {
-    color: #431808; 
+
+progress {
+    width: 100px;
+    height: 10px; 
+    background-color: #E6E0D2 ;
+    border: 0.5px solid blue;
+    border-radius: 20px;
 }
+progress::-webkit-progress-value {
+    background-color: blue;
+}
+progress::-webkit-progress-bar {
+    border-radius: 20px;
+}
+/* CSS để tùy chỉnh riêng biểu tượng Facebook,Git, Ins */
+.fab.fa-facebook, .fab.fa-github, .fab.fa-instagram {
+    font-size: 25px; 
+    margin-top: 10px;
+    margin-right: 10px; 
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+.contact a:hover .fab.fa-facebook, .contact a:hover .fab.fa-github, .contact a:hover .fab.fa-instagram {
+    color: #2d4373; /* Ví dụ: đổi màu đậm hơn khi di chuột qua */
+}
+
 
 /* Cột bên phải */
 .right-column {
-    background-color: #431808 ;
+    background-color: #E6E0D2;
     width: 65%;
     padding: 30px;
 }
-.right-column p, i, h3, li {
-    color: #84A93F;
+.right-column p, i, li {
+    color: #4F4F4F;
 }
 
+.right-column h3 {
+    font-size: 18px;
+    color: #1E0EFF; 
+    margin-top: 15px;
+}
 h1 {
     font-size: 24px;
-    color: #84A93F ;
+    color:  #1E0EFF; 
 }
 
 h2 {
     font-size: 18px;
-    color:  #84A93F;
+    color:  #1E0EFF ; 
     margin-bottom: 20px;
 }
 
@@ -100,6 +147,11 @@ h2 {
     margin-top: 15px;
 }
 
+.edu-item {
+    border-left: 2px solid blue;
+    padding: 7px;
+
+}
 .edu-item p, .exp-item p {
     margin-bottom: 5px;
 }
@@ -112,11 +164,17 @@ h2 {
     list-style-type: disc;
     margin-bottom: 5px;
 }
-.right-column i {
-    color: #84A93F;
+a  {
+    text-decoration: none;
 }
+
 /* Biểu tượng */
 i {
     margin-right: 8px;
-    color: #666;
+    color: blue ;
 }
+.updown {
+    display: flex;
+    justify-content: cpace-between;
+}
+
