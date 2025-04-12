@@ -24,42 +24,38 @@ body {
 
 hr {
     border: 1px solid blue;
-    margin-top: 5px ;
+    margin-top: 2px;
+}
+/* cột bên trái */
+aside {
+        width: 35%;
+        background-color: #E6E0D2;
+        padding: 20px;
+        text-align: center;
+        border-right: 2px solid blue;
 }
 
-/* Cột bên trái */
-.left-column {
-    width: 35%;
-    background-color: #E6E0D2;
-    padding: 20px;
-    text-align: center;
-    border-right: 2px solid blue;
 
-}
-
-.profile-section img {
+img {
     width: 100px;
     height: 120px;
     object-fit: cover;
-    
-    background-color: #fce4ec;
 }
 
-.left-column h3  {
+aside {
     font-size: 18px;
-    margin-top: 15px;
     color: #1E0EFF;
 }
 
-.left-column p, li {
+aside p, li {
     font-size: 14px;
-    color: #4F4F4F; 
+    color: #4F4F4F;     
 }
 
-.left-column p {
+aside p {
     margin-top: 5px;
     text-align: justify;
-    hyphens: auto;
+    hyphens: auto; 
     word-wrap: break-word; 
 }
 
@@ -70,21 +66,30 @@ hr {
 
 .contact p, .skills ul, .languages p {
     margin-top: 5px;
+    text-align: left;
+    margin-left: 5px;
 }
-
+ 
 .skills ul {
     list-style: none;
     padding-left: 0;
 }
 
-.skills li {
+li {
     margin-bottom: 5px;
+    margin-left: 10px;
 }
 
-.skills li::before {
-    content: "• ";
-    color: #4F4F4F;
-    font-weight: bold;
+
+.fab.fa-facebook, .fab.fa-github, .fab.fa-instagram {
+    font-size: 25px; 
+    margin-top: 10px;
+    margin-right: 10px; 
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+.contact a:hover .fab.fa-facebook, .contact a:hover .fab.fa-github, .contact a:hover .fab.fa-instagram {
+    color: #2d4373; /* Ví dụ: đổi màu đậm hơn khi di chuột qua */
 }
 
 progress {
@@ -100,78 +105,87 @@ progress::-webkit-progress-value {
 progress::-webkit-progress-bar {
     border-radius: 20px;
 }
-/* CSS để tùy chỉnh riêng biểu tượng Facebook,Git, Ins */
-.fab.fa-facebook, .fab.fa-github, .fab.fa-instagram {
-    font-size: 25px; 
-    margin-top: 10px;
-    margin-right: 10px; 
-    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
-}
 
-.contact a:hover .fab.fa-facebook, .contact a:hover .fab.fa-github, .contact a:hover .fab.fa-instagram {
-    color: #2d4373; /* Ví dụ: đổi màu đậm hơn khi di chuột qua */
-}
-
-
-/* Cột bên phải */
-.right-column {
+/* cột bên phải */
+main {
     background-color: #E6E0D2;
     width: 65%;
-    padding: 30px;
-}
-.right-column p, i, li {
-    color: #4F4F4F;
+    padding: 20px;
 }
 
-.right-column h3 {
+main h1 {
+    font-size: 24px;
+    color:  #1E0EFF;
+}
+
+main h2 {
+    color: #1E0EFF;
+    margin-top: 5px;
+    font-size: 20px;
+}
+main h3 {
     font-size: 18px;
     color: #1E0EFF; 
-    margin-top: 15px;
-}
-h1 {
-    font-size: 24px;
-    color:  #1E0EFF; 
-}
+}  
 
-h2 {
-    font-size: 18px;
-    color:  #1E0EFF ; 
-    margin-bottom: 20px;
+main p, i, li {
+    color: #4F4F4F;
 }
 
 .education, .experience {
     margin-top: 20px;
 }
 
-.edu-item, .exp-item {
+main section {
     margin-top: 15px;
 }
 
-.edu-item {
-    border-left: 2px solid blue;
-    padding: 7px;
-
-}
-.edu-item p, .exp-item p {
-    margin-bottom: 5px;
-}
-
-.exp-item ul {
-    padding-left: 20px;
-}
-
-.exp-item ul li {
-    list-style-type: disc;
-    margin-bottom: 5px;
-}
 a  {
     text-decoration: none;
 }
 
-/* Biểu tượng */
+ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+/* EDUCATION */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table th, table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+table th {
+    background-color: #E6E0D2;
+    color: #1E0EFF;
+}
+
+table strong {
+    color: #1E0EFF;
+}
+
+ ul {
+    padding-top: 10px;
+ }
+
+
+/* biểu tượng */
 i {
     margin-right: 8px;
     color: blue ;
 }
 
-
+footer {
+    position: fixed;        /* Giữ footer ở cố định */
+    bottom: 0;              /* Nằm ở sát dưới */
+    left: 0;                /* Căn lề trái */
+    width: 100%;            /* Dài hết chiều ngang */
+    text-align: left;       /* Văn bản căn trái */
+    padding: 10px 20px;     /* Khoảng cách với viền */
+    font-size: 14px;
+    color: #333;
+}
